@@ -2,15 +2,13 @@ class Solution {
 public:
     int rob(vector<int>& nums) {
         
-        vector<int> maxMoneyEndingThisHouse (nums.size());
-        int ans = 0;
-        for(int i=0;i<nums.size();i++){
-            maxMoneyEndingThisHouse[i] = nums[i];
-            for(int j=i-2;j>=0;j--){
-                maxMoneyEndingThisHouse[i] = max(            maxMoneyEndingThisHouse[i] ,maxMoneyEndingThisHouse[j] + nums[i]);
-            }
-            ans  = max(maxMoneyEndingThisHouse[i],ans);
+        int prev2 = 0, prev1 =0;
+        for(auto num : nums){
+            int temp = prev1;
+           
+            prev1 = max(prev2 + num, prev1);
+            prev2 = temp;
         }
-        return ans;
+        return prev1;
     }
 };
