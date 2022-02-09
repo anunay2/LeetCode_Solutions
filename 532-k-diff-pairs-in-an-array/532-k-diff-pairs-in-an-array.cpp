@@ -1,7 +1,7 @@
 class Solution {
 public:
     int findPairs(vector<int>& nums, int k) {
-        sort(nums.begin(),nums.end());
+        //sort(nums.begin(),nums.end());
         int i = 0,j = 1;
         if(nums.size()<=1){
             return 0;
