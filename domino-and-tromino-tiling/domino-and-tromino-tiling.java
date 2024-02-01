@@ -1,4 +1,7 @@
-class Solution {
+import java.util.HashMap;
+import java.util.Map;
+
+class Solution2 {
     int MOD = 1_000_000_007;
     Map<Integer, Long> f_cache = new HashMap<>();
     Map<Integer, Long> p_cache = new HashMap<>();

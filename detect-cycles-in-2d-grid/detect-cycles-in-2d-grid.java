@@ -1,4 +1,4 @@
-class Solution {
+class Solution1 {
     int[] DIR_X = {1, -1, 0, 0};
     int[] DIR_Y = {0, 0, 1, -1};
 	
